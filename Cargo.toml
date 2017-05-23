@@ -1,0 +1,10 @@
+[package]
+name = "htwg-scratchpad"
+version = "0.1.0"
+authors = ["Florian Gilcher <florian.gilcher@asquera.de>"]
+
+[dependencies]
+futures = "0.1"
+futures-cpupool = "0.1"
+tokio-core = "0.1"
+tokio-timer = "0.1"
