@@ -16,9 +16,12 @@ use futures_cpupool::CpuPool;
 fn main() {
     let timer = Timer::default();
 
+    let hang = 500;
+    let pass = 900;
+
     let sleep = timer.sleep(Duration::from_millis(1000))
                      .inspect("sleep");
-    let short_sleep = timer.sleep(Duration::from_millis(900))
+    let short_sleep = timer.sleep(Duration::from_millis(hang))
                      .inspect("short sleep");
     
     let select = select_all(vec![sleep, short_sleep]);
